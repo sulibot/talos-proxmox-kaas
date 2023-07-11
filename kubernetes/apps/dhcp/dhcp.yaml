@@ -35,7 +35,7 @@ stringData:
       option broadcast-address 10.1.1.250;
       option routers 10.1.1.1;
       option domain-name-servers 1.1.1.1, 1.0.0.1;
-      option domain-name "weecodelab.nl";
+      option domain-name "sulibot.com";
       default-lease-time 600;
       max-lease-time 7200;
     }

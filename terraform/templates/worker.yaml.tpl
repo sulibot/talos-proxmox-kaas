@@ -27,8 +27,7 @@ machine:
         aliases:
           - ${apiDomain} 
     nameservers:
-      - 1.1.1.1
-      - 8.8.8.8
+      - 192.168.10.1
     kubespan:
       enabled: false
   install:
@@ -69,28 +68,6 @@ machine:
       - name: br_netfilter
         parameters:
           - nf_conntrack_max=131072
-  registries:
-    mirrors:
-      docker.io:
-        endpoints:
-          - http://${registry-endpoint}/v2/proxy-docker.io
-        overridePath: true
-      ghcr.io:
-        endpoints:
-          - http://${registry-endpoint}/v2/proxy-ghcr.io
-        overridePath: true
-      gcr.io:
-        endpoints:
-          - http://${registry-endpoint}/v2/proxy-gcr.io
-        overridePath: true
-      registry.k8s.io:
-        endpoints:
-          - http://${registry-endpoint}/v2/proxy-registry.k8s.io
-        overridePath: true
-      quay.io:
-        endpoints:
-          - http://${registry-endpoint}/v2/proxy-quay.io
-        overridePath: true
 cluster:
   controlPlane:
     endpoint: https://${apiDomain}:6443

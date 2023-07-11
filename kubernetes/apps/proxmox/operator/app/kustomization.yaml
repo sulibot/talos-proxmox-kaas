@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   # Pre Flux-Kustomizations
   - ./proxmox-operator.yaml
-  - ./proxmox-csi-plugin.yml
+  # - ./proxmox-csi-plugin.yml

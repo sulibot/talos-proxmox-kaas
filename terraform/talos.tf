@@ -24,8 +24,8 @@ data "talos_machine_configuration" "mc_1" {
         clusters = yamlencode({
           clusters = [
             {
-              token_id     = var.proxmox_token_id
-              token_secret = var.proxmox_token_secret
+              token_id     = local.proxmox_api_token_id
+              token_secret = local.proxmox_api_token_secret
               url          = var.proxmox_host
               region       = var.region
             },
@@ -34,8 +34,8 @@ data "talos_machine_configuration" "mc_1" {
         pxcreds = yamlencode({
           clusters = {
             cluster-1 = {
-              api_token_id     = var.proxmox_token_id
-              api_token_secret = var.proxmox_token_secret
+              api_token_id     = local.proxmox_api_token_id
+              api_token_secret = local.proxmox_api_token_secret
               api_url          = var.proxmox_host
               pool             = var.pool
             }
@@ -70,8 +70,8 @@ data "talos_machine_configuration" "mc_2" {
         clusters = yamlencode({
           clusters = [
             {
-              token_id     = var.proxmox_token_id
-              token_secret = var.proxmox_token_secret
+              token_id     = local.proxmox_api_token_id
+              token_secret = local.proxmox_api_token_secret
               url          = var.proxmox_host
               region       = var.region
             },
@@ -80,8 +80,8 @@ data "talos_machine_configuration" "mc_2" {
         pxcreds = yamlencode({
           clusters = {
             cluster-1 = {
-              api_token_id     = var.proxmox_token_id
-              api_token_secret = var.proxmox_token_secret
+              api_token_id     = local.proxmox_api_token_id
+              api_token_secret = local.proxmox_api_token_secret
               api_url          = var.proxmox_host
               pool             = var.pool
             }
@@ -116,8 +116,8 @@ data "talos_machine_configuration" "mc_3" {
         clusters = yamlencode({
           clusters = [
             {
-              token_id     = var.proxmox_token_id
-              token_secret = var.proxmox_token_secret
+              token_id     = local.proxmox_api_token_id
+              token_secret = local.proxmox_api_token_secret
               url          = var.proxmox_host
               region       = var.region
             },
@@ -126,8 +126,8 @@ data "talos_machine_configuration" "mc_3" {
         pxcreds = yamlencode({
           clusters = {
             cluster-1 = {
-              api_token_id     = var.proxmox_token_id
-              api_token_secret = var.proxmox_token_secret
+              api_token_id     = local.proxmox_api_token_id
+              api_token_secret = local.proxmox_api_token_secret
               api_url          = var.proxmox_host
               pool             = var.pool
             }

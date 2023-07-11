@@ -1,3 +1,8 @@
+locals {
+  proxmox_api_token_id     = data.sops_file.auth-secrets.data["proxmox_api_token_id"]
+  proxmox_api_token_secret = data.sops_file.auth-secrets.data["proxmox_api_token_secret"]
+}
+
 variable "kubernetes" {
   type = map(string)
   default = {
@@ -81,15 +86,15 @@ variable "proxmox_storage2" {
   type        = string
 }
 
-variable "proxmox_token_id" {
-  description = "Proxmox token id"
-  type        = string
-}
+#variable "proxmox_token_id" {
+#  description = "Proxmox token id"
+#  type        = string
+#}
 
-variable "proxmox_token_secret" {
-  description = "Proxmox token secret"
-  type        = string
-}
+#variable "proxmox_token_secret" {
+#  description = "Proxmox token secret"
+#  type        = string
+#}
 
 variable "first_ip" {
   type = string

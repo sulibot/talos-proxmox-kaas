@@ -5,3 +5,10 @@ metadata:
   name: cert-manager
   labels:
     kustomize.toolkit.fluxcd.io/prune: disabled
+---
+# namespace.yaml
+kind: Namespace
+metadata:
+  name: nfs-provisioner
+  labels:
+    kustomize.toolkit.fluxcd.io/prune: disabled

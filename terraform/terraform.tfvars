@@ -1,9 +1,13 @@
+proxmox_host          = "https://pve.sulibot.com:8006/api2/json"
+target_node_name      = "pve"
+cluster_name          = "mgmt-cluster"
+
 vpc_main_cidr         = "10.1.1.0/24"            # nodes subnet
 gateway               = "10.1.1.1"               # subnet gateway
 first_ip              = "5"                      # first ip address of the master-1 node - 10.1.1.5
 worker_first_ip       = "8"                      # first ip address of the worker-1 node - 10.1.1.8
 proxmox_storage1      = "vms"                    # proxmox storage lvm 1
-proxmox_storage2      = "vms2"                   # proxmox storage lvm 2
+proxmox_storage2      = "vms"                    # proxmox storage lvm 2
 k8s_version           = "v1.27.1"                # k8s version
 proxmox_image         = "talos"                  # talos image created by packer
 talos_version         = "v1.4"                   # talos version for machineconfig gen
@@ -26,4 +30,5 @@ kubernetes = {
   # FLUX ConfigMap settings
   sidero-endpoint = "10.1.1.30"
   cluster-0-vip   = "10.1.1.40"
+  #
 }
