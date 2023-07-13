@@ -14,8 +14,8 @@ talos_version         = "v1.4"                   # talos version for machineconf
 cluster_endpoint      = "https://10.1.1.20:6443" # cluster endpoint to fetch via talosctl
 region                = "cluster-1"              # proxmox cluster name
 pool                  = "prod"                   # proxmox pool for vms
-private_key_file_path = "~/.ssh/id_rsa"          # fluxcd git creds for ssh
-public_key_file_path  = "~/.ssh/id_rsa.pub"      # fluxcd git creds for ssh
+private_key_file_path = "~/.ssh/id_rsa_github"          # fluxcd git creds for ssh
+public_key_file_path  = "~/.ssh/id_rsa_github.pub"      # fluxcd git creds for ssh
 known_hosts           = "github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg="
 
 kubernetes = {
